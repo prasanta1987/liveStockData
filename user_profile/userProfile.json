@@ -1,1 +1,12 @@
-{"name":"Prasanta Karmakar","watchList":["HDBK","RELI","IDFC"],"transactions":{"buy":[{"id":1598727743120,"symbol":"HDFCBANK","date":"30-08-2020","price":1107,"qty":2},{"id":1598727776744,"symbol":"HDFCBANK","date":"30-08-2020","price":1107,"qty":2}],"sell":[]}}
+{
+    "name": "Prasanta Karmakar",
+    "watchList": [],
+    "buyTransactions": [
+        {
+            "name": "ICICI Prudential US Bluechip Equity Fund - Direct Plan - Growth",
+            "mfId": "120186",
+            "buyDate": "10"
+        }
+    ],
+    "selltransactions": []
+}
