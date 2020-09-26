@@ -8,6 +8,7 @@ fetch(`https://api.mfapi.in/mf/${mfCode}`)
         document.querySelector('.mfcat').innerHTML = data.meta.scheme_category
 
         let chartDataArray = []
+        console.log(data.data)
         data.data.forEach(values => {
             let newDateFormat = new Date(retDateFormat(values.date)).getTime()
             chartDataArray.push([newDateFormat, parseFloat(values.nav)])
@@ -38,7 +39,7 @@ const intraGrpah = (datas) => {
 
     Highcharts.stockChart('container-intra', {
         time: {
-            useGMT: true,
+            useUTC: false,
         },
         stockTools: {
             gui: {

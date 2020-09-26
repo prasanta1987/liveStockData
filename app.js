@@ -39,6 +39,37 @@ const getUserProfile = () => {
 
 
 
+app.post('/buyMF/:name/:id/:date/:buyNav/:buyPrice', (req, res) => {
+
+    let mfName = req.params.name
+    let mfId = req.params.id
+    let buyDate = req.params.date
+    let buyNav = parseFloat(req.params.buyNav)
+    let buyPrice = parseFloat(req.params.buyPrice)
+
+    let unitAvl = buyPrice / buyNav
+
+    let data = {
+        name: mfName,
+        mfId: mfId,
+        buyDate: buyDate,
+        buyNav: buyNav,
+        buyPrice: buyPrice,
+        unitAvl: unitAvl
+    }
+
+    let userData = getUserProfile()
+    userData.buyTransactions.push(data)
+
+    try {
+        fs.writeFileSync(userPrifileFile, JSON.stringify(userData, null, 4))
+        res.status(200).json({ "message": "Data Written Successfully" })
+    } catch (error) {
+        res.status(501).json({ "error": 'Something Went Wrong' })
+    }
+})
+
+
 // Moneycontrol Data Ends here
 const port = process.env.PORT || 3000
 

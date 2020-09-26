@@ -56,9 +56,8 @@
                     <thead>
                         <tr class="text-center">
                             <th>Scm. Name</th>
-                            <th>Buy Date</th>
-                            <th>Buy Nav</th>
-                            <th>Current Nav</th>
+                            <th>Invested</th>
+                            <th>Current Value</th>
                             <th>P&L</th>
                         </tr>
                     </thead>
@@ -82,13 +81,19 @@
                     </div>
                     <div class="modal-body">
 
+                        <div class="mb-2 mt2">
+                            <small>
+                                <span>Nav Applicable: </span>
+                                <span class="ml-2 navappl"></span>
+                            </small>
+                        </div>
                         <div class="mb-2 input-group">
                             <input type="date" class="text-center form-control" placeholder="Sold Date"
                                 aria-label="Sold Date" aria-describedby="basic-addon2" id="buydate">
                         </div>
 
                         <div class="input-group mt-1 mb-1">
-                            <input type="number" class="form-control" placeholder="Price" aria-label="Sold Price"
+                            <input type="number" class="form-control bp" placeholder="Price" aria-label="Sold Price"
                                 aria-describedby="basic-addon2" id="buyprice">
                         </div>
 

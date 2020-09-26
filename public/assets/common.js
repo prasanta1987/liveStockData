@@ -12,9 +12,22 @@ const getUserData = async () => {
     }
 }
 
-
 getUserData()
 
+const returnNavValue = async (mfId, mfDate) => {
+    let res = await fetch(`https://api.mfapi.in/mf/${mfId}`)
+    let data = await res.json()
+
+    let dtdNav = 0
+
+    data.data.forEach(nav => {
+        if (nav.date == mfDate) {
+            dtdNav = parseFloat(nav.nav)
+        }
+    })
+
+    return dtdNav
+}
 
 document.querySelector('.mfname').addEventListener('keyup', e => {
     let mfName = e.target.value

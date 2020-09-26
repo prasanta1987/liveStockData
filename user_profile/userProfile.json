@@ -3,9 +3,20 @@
     "watchList": [],
     "buyTransactions": [
         {
-            "name": "ICICI Prudential US Bluechip Equity Fund - Direct Plan - Growth",
-            "mfId": "120186",
-            "buyDate": "10"
+            "name": "Motilal Oswal Liquid Fund - Direct Growth",
+            "mfId": "145834",
+            "buyDate": "24-09-2020",
+            "buyNav": 10.8704,
+            "buyPrice": 10000,
+            "unitAvl": 919.9293494259641
+        },
+        {
+            "name": "Motilal Oswal Liquid Fund - Direct Growth",
+            "mfId": "145834",
+            "buyDate": "07-09-2020",
+            "buyNav": 10.8565,
+            "buyPrice": 20000,
+            "unitAvl": 1842.2143416386496
         }
     ],
     "selltransactions": []
