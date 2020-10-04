@@ -63,8 +63,8 @@ const getHoldings = (userData) => {
                 } else {
                     document.querySelector('.tpl').style.color = '#dc3545'
                 }
-                document.querySelector('.ti').innerHTML = totalinv.toFixed(2)
-                document.querySelector('.cv').innerHTML = crntVal.toFixed(2)
+                document.querySelector('.ti').innerHTML = formatCurrency(totalinv.toFixed(2))
+                document.querySelector('.cv').innerHTML = formatCurrency(crntVal.toFixed(2))
                 document.querySelector('.tpl').innerHTML = totalPL.toFixed(2)
             })
             .catch(err => {
