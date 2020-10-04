@@ -1,115 +1,128 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>My MF Holdings</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My MF Holdings</title>
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/min/moment.min.js"></script>
 
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/styles.css">
-    </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
 
-    <body>
+<body>
 
-        <div class="sticky-top nav">
-            <div class="container-fluid d-flex align-items-center">
-                <div class="brand">
-                    <h4>Stock View</h4>
-                </div>
-                <div class="menu flex-grow-1 ml-2">
-                    <ul class="d-flex m-0">
-                        <li class="nav-link"><a href="/">Home</a></li>
-                        <!-- <li class="nav-link"><a href="/watchlist">WatchList</a></li> -->
-                        <!-- <li class="nav-link"><a href="/tradebook">Trade Book</a></li> -->
-                    </ul>
-                </div>
-                <div class="search">
-                    <input type="text" class="form-control mfname" placeholder="Find MF By Name">
-                    <div class="searchcontainer">
-                        <div class="suggestionresponse"></div>
-                    </div>
+    <div class="sticky-top nav">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="brand">
+                <h4>Stock View</h4>
+            </div>
+            <div class="menu flex-grow-1 ml-2">
+                <ul class="d-flex m-0">
+                    <li class="nav-link"><a href="/">Home</a></li>
+                    <!-- <li class="nav-link"><a href="/watchlist">WatchList</a></li> -->
+                    <!-- <li class="nav-link"><a href="/tradebook">Trade Book</a></li> -->
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" class="form-control mfname" placeholder="Find MF By Name">
+                <div class="searchcontainer">
+                    <div class="suggestionresponse"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="container-fluid holdings">
+    <div class="container-fluid holdings">
 
-            <!-- Holdings Start Here -->
-            <div class="table-responsive border rounded mt-5">
-                <h3 class="p-2 m-0 bg-primary lead text-center text-light">Current Holdings</h3>
-                <table class="table table-hover">
-                    <thead>
-                        <tr class="text-center">
-                            <th>Scm. Name</th>
-                            <th>Invested</th>
-                            <th>Current Value</th>
-                            <th>P&L</th>
-                        </tr>
-                    </thead>
-                    <tbody class="holdingdata"></tbody>
-                </table>
+        <div class="row text-center mt-3">
+            <div class="col-sm">
+                <h3 class="lead current-status"><span>Total Invested : </span><b class="ml-3 ti"></b></h3>
             </div>
-            <!-- End Of Holdings -->
+            <div class="col-sm">
+                <h3 class="lead current-status"><span>Current Value : </span><b class="ml-3 cv"></b></h3>
+            </div>
+            <div class="col-sm">
+                <h3 class="lead current-status"><span>Total Gain/Loss : </span><b class="ml-3 tpl"></b></h3>
+            </div>
         </div>
 
+        <hr>
+        <!-- Holdings Start Here -->
+        <div class="table-responsive border rounded">
+            <h3 class="p-2 m-0 bg-primary lead text-center text-light">Holdings</h3>
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-left">Scheme Name</th>
+                        <th>Invested</th>
+                        <th>Current Value</th>
+                        <th>Return</th>
+                    </tr>
+                </thead>
+                <tbody class="holdingdata text-center"></tbody>
+            </table>
+        </div>
+        <!-- End Of Holdings -->
+    </div>
 
-        <!-- Transaction MODAL STRAT -->
-        <div class="modal fade" id="trnsModal" tabindex="-1" role="dialog" aria-labelledby="trnsModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="lead modalmfname"></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+
+    <!-- Transaction MODAL STRAT -->
+    <div class="modal fade" id="trnsModal" tabindex="-1" role="dialog" aria-labelledby="trnsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="lead modalmfname"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-2 mt2">
+                        <small>
+                            <span>Nav Applicable: </span>
+                            <span class="ml-2 navappl"></span>
+                        </small>
                     </div>
-                    <div class="modal-body">
-
-                        <div class="mb-2 mt2">
-                            <small>
-                                <span>Nav Applicable: </span>
-                                <span class="ml-2 navappl"></span>
-                            </small>
-                        </div>
-                        <div class="mb-2 input-group">
-                            <input type="date" class="text-center form-control" placeholder="Sold Date"
-                                aria-label="Sold Date" aria-describedby="basic-addon2" id="buydate">
-                        </div>
-
-                        <div class="input-group mt-1 mb-1">
-                            <input type="number" class="form-control bp" placeholder="Price" aria-label="Sold Price"
-                                aria-describedby="basic-addon2" id="buyprice">
-                        </div>
-
+                    <div class="mb-2 input-group">
+                        <input type="date" class="text-center form-control" placeholder="Sold Date"
+                            aria-label="Sold Date" aria-describedby="basic-addon2" id="buydate">
                     </div>
-                    <div class="modal-footer">
-                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                        <button type="button" class="btn btn-success" onclick="addTrns()">BUY</button>
+
+                    <div class="input-group mt-1 mb-1">
+                        <input type="number" class="form-control bp" placeholder="Price" aria-label="Sold Price"
+                            aria-describedby="basic-addon2" id="buyprice">
                     </div>
+
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-success" onclick="addTrns()">BUY</button>
                 </div>
             </div>
         </div>
-        <!-- Transaction MODAL END -->
+    </div>
+    <!-- Transaction MODAL END -->
 
 
-        <script src="./assets/common.js"></script>
-        <script src="./assets/home.js"></script>
-    </body>
+    <script src="./assets/common.js"></script>
+    <script src="./assets/home.js"></script>
+</body>
 
 </html>

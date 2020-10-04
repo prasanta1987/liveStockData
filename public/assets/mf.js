@@ -59,20 +59,31 @@ const intraGrpah = (datas) => {
                 type: 'month',
                 text: '1M'
             }, {
-                count: 2,
-                type: 'month',
-                text: '2H'
-            },
-            {
                 count: 6,
                 type: 'month',
-                text: '4h'
-            }, {
+                text: '6M'
+            },
+            {
+                count: 1,
+                type: 'year',
+                text: '1Y'
+            },
+            {
+                count: 3,
+                type: 'year',
+                text: '3Y'
+            },
+            {
+                count: 5,
+                type: 'year',
+                text: '5Y'
+            },
+            {
                 type: 'all',
                 text: 'All'
             }],
             inputEnabled: false,
-            selected: 3
+            selected: 2
         },
 
         title: {

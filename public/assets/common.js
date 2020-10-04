@@ -3,7 +3,7 @@ const getUserData = async () => {
     try {
         let res = await fetch('/getUserData', { method: 'POST' })
         let data = await res.json()
-
+        userData = data
         if (document.querySelector('.holdings')) getHoldings(data)
 
     } catch (error) {
@@ -27,6 +27,36 @@ const returnNavValue = async (mfId, mfDate) => {
     })
 
     return dtdNav
+}
+
+const returnCurrentNavValue = async (mfId) => {
+    let res = await fetch(`https://api.mfapi.in/mf/${mfId}`)
+    let data = await res.json()
+
+    return parseFloat(data.data[0].nav)
+}
+
+const returnHoldingDatas = (mfId) => {
+
+    let totalinvested = 0, totalAvlUnits = 0, mfName;
+
+    userData.buyTransactions.forEach(data => {
+        if (data.mfId == mfId) {
+            totalinvested += data.buyPrice
+            totalAvlUnits += data.buyPrice / data.buyNav
+            mfName = data.name
+        }
+    })
+
+    let avgNav = totalinvested / totalAvlUnits
+
+    let holdinfDetail = {
+        mfName: mfName,
+        invested: totalinvested,
+        avlUnits: totalAvlUnits,
+        avgNav: avgNav
+    }
+    return holdinfDetail
 }
 
 document.querySelector('.mfname').addEventListener('keyup', e => {

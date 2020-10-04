@@ -50,6 +50,7 @@ app.post('/buyMF/:name/:id/:date/:buyNav/:buyPrice', (req, res) => {
     let unitAvl = buyPrice / buyNav
 
     let data = {
+        id:new Date().getTime(),
         name: mfName,
         mfId: mfId,
         buyDate: buyDate,
