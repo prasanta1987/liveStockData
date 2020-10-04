@@ -25,3 +25,5 @@
     background: #f4f4f4;
 }
 .current-status{font-size: 30px;}
+.links{color: #555; text-decoration: none}
+.links:hover{text-decoration: none; color: #242629;}
