@@ -66,6 +66,7 @@
             "unitAvl": 1.5120011183941244
         },
         {
+<<<<<<< HEAD
             "id": 1602996970815,
             "name": "UTI - Overnight Fund - Direct Plan - Growth Option",
             "mfId": "120785",
@@ -73,6 +74,15 @@
             "buyNav": 2777.3293,
             "buyPrice": 2199.64,
             "unitAvl": 0.7919982697046404
+=======
+            "id": 1601805293645,
+            "name": "UTI - Overnight Fund - Direct Plan - Growth Option",
+            "mfId": "120785",
+            "buyDate": "05-10-2020",
+            "buyNav": 2777.3293,
+            "buyPrice": 2200,
+            "unitAvl": 0.792
+>>>>>>> 17e67ab42e107bbbb8a28c7e9e9d488c3abce0c4
         }
     ],
     "selltransactions": []
