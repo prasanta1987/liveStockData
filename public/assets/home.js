@@ -53,9 +53,9 @@ const getHoldings = (userData) => {
                 document.querySelector('.holdingdata').innerHTML += `
                     <tr>
                         <td class="text-left"><a class="links" href="/${ids}">${data.mfName}</a></td>
-                        <td id="inv-${ids}">${data.invested}</td>
-                        <td>${currentValue}</td>
-                        <td class="${(pl < 0 ? 'text-danger' : 'text-success')}">${pl}</td>
+                        <td id="inv-${ids}">${data.invested.toFixed(2)}</td>
+                        <td>${currentValue.toFixed(2)}</td>
+                        <td class="${(pl < 0 ? 'text-danger' : 'text-success')}">${pl.toFixed(2)}</td>
                     </tr>`
 
                 if (totalPL > 0) {
