@@ -82,6 +82,15 @@
             "buyNav": 12.5951,
             "buyPrice": 2179.88,
             "unitAvl": 173.0736556279823
+        },
+        {
+            "id": 1603779519569,
+            "name": "HDFC Liquid Fund -Direct Plan - Growth Option",
+            "mfId": "119091",
+            "buyDate": "22-10-2020",
+            "buyNav": 3991.765,
+            "buyPrice": 16170.64,
+            "unitAvl": 4.050999996242264
         }
     ],
     "selltransactions": []
