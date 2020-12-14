@@ -3,24 +3,6 @@
     "watchList": [],
     "buyTransactions": [
         {
-            "id": 1601804815354,
-            "name": "Aditya Birla Sun Life Low duration Fund - Growth - Direct Plan",
-            "mfId": "119523",
-            "buyDate": "22-07-2020",
-            "buyNav": 532.4037,
-            "buyPrice": 10000,
-            "unitAvl": 18.782739488850286
-        },
-        {
-            "id": 1601804922334,
-            "name": "Aditya Birla Sun Life Low duration Fund - Growth - Direct Plan",
-            "mfId": "119523",
-            "buyDate": "07-02-2020",
-            "buyNav": 509.4384,
-            "buyPrice": 500,
-            "unitAvl": 0.9814729317617203
-        },
-        {
             "id": 1601805200378,
             "name": "ICICI Prudential Sensex Index Fund - Direct Plan - Dividend Option",
             "mfId": "141842",
@@ -28,33 +10,6 @@
             "buyNav": 12.2397,
             "buyPrice": 286.2,
             "unitAvl": 23.38292605210912
-        },
-        {
-            "id": 1601805358045,
-            "name": "Nippon India Pharma Fund - Direct Plan Growth Plan - Growth Option",
-            "mfId": "118759",
-            "buyDate": "31-08-2020",
-            "buyNav": 226.8821,
-            "buyPrice": 10000,
-            "unitAvl": 44.075755645773725
-        },
-        {
-            "id": 1601805380901,
-            "name": "Nippon India Pharma Fund - Direct Plan Growth Plan - Growth Option",
-            "mfId": "118759",
-            "buyDate": "25-08-2020",
-            "buyNav": 236.2345,
-            "buyPrice": 1000,
-            "unitAvl": 4.233081958816346
-        },
-        {
-            "id": 1601805455361,
-            "name": "Aditya Birla Sun Life Low duration Fund - Growth - Direct Plan",
-            "mfId": "119523",
-            "buyDate": "08-09-2020",
-            "buyNav": 536.4346,
-            "buyPrice": 1001,
-            "unitAvl": 1.8660243019372724
         },
         {
             "id": 1601806293645,
@@ -84,13 +39,13 @@
             "unitAvl": 173.0736556279823
         },
         {
-            "id": 1603779519569,
-            "name": "HDFC Liquid Fund -Direct Plan - Growth Option",
-            "mfId": "119091",
-            "buyDate": "22-10-2020",
-            "buyNav": 3991.765,
-            "buyPrice": 16170.64,
-            "unitAvl": 4.050999996242264
+            "id": 1607958237990,
+            "name": "ICICI Prudential Sensex Index Fund - Direct Plan - Dividend Option",
+            "mfId": "141842",
+            "buyDate": "07-12-2020",
+            "buyNav": 14.4124,
+            "buyPrice": 29998.5,
+            "unitAvl": 2081.4368182953567
         }
     ],
     "selltransactions": []
